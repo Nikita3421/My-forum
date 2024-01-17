@@ -1,0 +1,22 @@
+{% extends "skeleton/base.html" %}
+
+{% block title %}Список работ{% endblock %}
+
+{% block content %}
+    <div class = content2>
+        <ul><h1 href="{%url 'post' pk=post.pk%}" class = content2>{{ post.title }}</h1></ul>
+        <p class = content2>_______________________________________________________________________________________________________________________________________________________________________</p>
+        <h3 class = content2 href=>{{post.context }}</h3>
+        <p class = content2>_______________________________________________________________________________________________________________________________________________________________________</p>
+        {% if post.image_url %}
+            <img src="{{ post.image_url.url }}" alt="{{ post.title }}" >
+            <p class = content2>_______________________________________________________________________________________________________________________________________________________________________</p>
+        {%comment%}{% else %}
+        <img src="https://cdn.27.ua/799/bc/59/1424473_1.jpeg" alt="" >{%endcomment%}
+        {% endif %}
+        {%for comment in comments%}
+            {{comment.cotext}}
+        {%endfor%}
+    </div>
+{% endblock %}
+

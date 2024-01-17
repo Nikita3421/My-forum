@@ -1,0 +1,24 @@
+{% extends "skeleton/base.html" %}
+{% block title %}Список постов{% endblock %}
+
+{% block content %}
+<!-- Содержимое страницы "post_list.html" -->
+<div class="row">
+    <div class="column">
+        <h2 class="content">Посты</h2> 
+        {% for post in posts %} 
+            <div class="content">
+                <h3><a href="{% url 'post' pk=post.pk %}">{{ post.title }}</a><img src="/media/default_image.png" alt="{{ post.title }}" width="30" height="auto"></h3>
+            </div>
+        {% endfor %}
+    </div>
+    <div class="column">
+        <h2 class="content">Работы искусства</h2> 
+        {% for artwork in artworks %} 
+            <div class="content">
+                <h3><a href="{% url 'artwork' pk=artwork.pk %}">{{ artwork.title }}</a></h3>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

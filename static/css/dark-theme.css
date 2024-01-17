@@ -1,0 +1,25 @@
+/* Стили для тёмной темы */
+body.dark-theme {
+    background-color: #000000; /* Задний фон - тёмный */
+    color: #fff; /* Цвет текста - белый */
+}
+
+/* Стили для других элементов, если необходимо */
+.header.dark-theme {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/* Стили для ссылок */
+a.dark-theme {
+    color: rgb(214, 214, 0); /* Цвет ссылок */
+}
+
+/* Стили для тёмной темы */
+.content{
+    color: rgb(255, 255, 255)
+}
+
+.content2{
+    color: rgb(255, 255, 255)
+}

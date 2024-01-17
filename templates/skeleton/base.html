@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %}Заголовок{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/dark-theme.css' %}" id="theme-stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/light-theme.css' %}">
+
+
+
+    <!-- Другие общие статические файлы, если есть -->
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <h3>
+                    <li><a href="/">Главная</a></li>
+                    <li><a href="/about/">О нас</a></li>
+                    <li><a href="/contact/">Контакты</a></li>
+                    <!-- Добавляем кнопку для переключения темы -->
+                    <li><button id="theme-toggle">Сменить тему</button></li>
+                </h3> <!-- Общая навигация -->
+            </ul>
+        </nav>
+        <!-- Общий хедер -->
+    </header>
+    <div id="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+    <footer>
+        &copy; Создано 2023.23.09 <br>
+        &copy; проспонсировано Pyshop.com "интернет магазин будущего"<br>
+        &copy; все права доступа предоставлены по данной ссылке <a href="/admin-info/">https://www.bigtrap.com/rules-infopage/</a>
+    </footer>
+    
+    <!-- Подключаем JavaScript-файл для переключения темы -->
+    <script src="{% static 'js/scripts.js' %}"></script>
+</body>
+</html>

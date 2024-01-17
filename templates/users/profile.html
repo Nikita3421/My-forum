@@ -1,0 +1,10 @@
+{% include "users/base.html" %}
+{% block title %}
+    <title>register</title>
+{% endblock %}
+{% block content %}
+    <div class="container d-flex justify-content-center align-items-center">
+        {{user.username}}<br>
+        <a href='{% url "profile_edit" %}'>Змінити профіль</a>
+    </div>
+{% endblock %}

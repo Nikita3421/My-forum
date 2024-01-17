@@ -1,0 +1,30 @@
+/* Стили для светлой темы */
+body.light-theme {
+    background-color: #fff; /* Задний фон - светлый */
+    color: #000000; /* Цвет текста - тёмный */
+}
+
+/* Стили для других элементов, если необходимо */
+.header.light-theme {
+    background-color: #f0f0f0;
+    color: #000000;
+}
+
+/* Стили для ссылок */
+a.light-theme {
+    color: #0259b6; /* Цвет ссылок */
+}
+
+/* Стили для светлой темы */
+.column {
+    float: left;
+    width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+

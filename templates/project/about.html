@@ -1,0 +1,16 @@
+{% extends "skeleton/base.html" %}
+
+{% block title %}О нас{% endblock %}
+
+{% block content %}
+    <div class = content2>
+        <h3 class = content2 href=>{{ about.context }}</h3>
+        <p class = content2>_______________________________________________________________________________________________________________________________________________________________________</p>
+        {% if about.image_url %}
+            <img src="{{ post.image_url.url }}" alt="{{ post.title }}" >
+            <p class = content3>_______________________________________________________________________________________________________________________________________________________________________</p>
+        {%comment%}{% else %}
+        <img src="https://cdn.27.ua/799/bc/59/1424473_1.jpeg" alt="" >{%endcomment%}
+        {% endif %}
+    </div>
+{% endblock %}
